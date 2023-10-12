@@ -1,0 +1,12 @@
+# from: https://jfrog.com/help/r/jfrog-pipelines-documentation/gitrepo
+template: true   # required for local templates
+valuesFilePath: ./values.yml
+
+resources:
+  - name: my_app_repo
+    type: GitRepo
+    configuration:
+      gitProvider: GitHub
+      path: helcorin/jfrog-pipeline
+      branches:
+        include: main
